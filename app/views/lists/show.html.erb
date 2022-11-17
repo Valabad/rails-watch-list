@@ -1,0 +1,11 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));">
+  <div class="container">
+    <h1><%= @list.name %></h1>
+  </div>
+  <%= link_to  "retour", lists_path%>
+</div>
+<div>
+  <%= link_to "Delete",
+    list_path(@list),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn-danger btn" %>
+</div>

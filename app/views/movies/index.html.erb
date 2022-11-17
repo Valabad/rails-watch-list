@@ -1,0 +1,14 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1925&q=80);">
+  <h1>Le film que tu cherches est ici!!!</h1>
+</div>
+<div class= "container">
+  <ul>
+    <h2> Votre liste préférée</h2>
+    <% @movies.each do |movie| %>
+      <li><%= link_to movie.title, movie_path(movie) %></li>
+    <% end %>
+  </ul>
+</div>
+div
+<h2> Vos listes</h2>
+<%= link_to  "Creer une nouvelle liste", movies_path%>
